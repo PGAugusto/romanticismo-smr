@@ -51,6 +51,7 @@ h1,h2,h3 {
 #espronceda { width:30%;
               float:left; /* para que la imagen tenga el texto alrededor */
               padding:10px;
+              
 }
 
 #limpiar {clear:both;} /* desactivar el floar left/right */
@@ -58,6 +59,13 @@ h1,h2,h3 {
 p { 
     text-align: justify;
 }
+
+a {text-decoration:none;
+   color:red;}
+
+/* pseudoclase como selector  :hover  (ratón encima) */
+
+a:hover {color:purple;}
 
 /****** MEDIA QUERIES **********/
 
