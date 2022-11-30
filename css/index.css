@@ -146,7 +146,11 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
 
 .col2 img {width:100%;}
 
-.col-texto {padding:4%;}
+.col-texto {padding:4%;
+            }
+          
+.col-texto li {margin-bottom:10px;}
+.col-texto ul {list-style-image: url("../images/1024px-Red_check.svg.png");}
 
 
 /**************  GRID AUTORES ********************************************/
@@ -177,18 +181,20 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
    }
 
 .card img {width:100%;
+           height:300px; /* esto no debería hacerse */
            border-radius:50%;
            filter:sepia();
            opacity:0.75;
-           transition: 1s;}
+           transition: 1s; /* cambio suave */
+          }
 
 .card img:hover {opacity:1;}
 
-.boton {text-decoration:none;
-        color:white;
-        font-weight:bold;
-        background-color: #555;
-        padding:5px 10px;
+.boton {text-decoration:none; /* quitar el subrayado */  
+        color:white;        /* texto en blanco */
+        font-weight:bold;     /* texto en negrita */
+        background-color: #555; /* color botón */
+        padding:5px 10px;   /* espacio libre en botón */
         border-radius:5px;}
 
 .boton:hover {background-color: #c1c0c0;
@@ -197,10 +203,68 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
 /**************     FOOTER ***********************************************/
 
 footer {background-color: #f1f1f1;}
+
 .grid3 {display:grid;
-        grid-template-columns: 25% 25% 50%;}
-.col3 {padding: 6%;}
+        grid-template-columns: 25% 25% 50%;
+        align-items:center;
+        }
+.col3 {padding: 6%;
+       }
+.col3 img {width:50%; /* para que no se salga de su cuadro */
+           display:block; /* la convierto en bloque */
+           margin:auto; /* la centra dentro de la col. */
+          }
 #ancha {padding:3%;}
+
+/* Style all font awesome icons */
+.fa {box-sizing:content-box; /* el padding, lo añade al width */
+     padding: 15px;
+     font-size: 25px;
+     width: 30px; height:30px; border-radius:50%;
+     text-align: center;
+     text-decoration: none;
+   }
+   
+   /* Add a hover effect if you want */
+   .fa:hover {
+     opacity: 0.7;
+   }
+
+   .fa-facebook {
+     background: #3B5998;
+     color: white;
+   }
+   
+   .fa-twitter {
+     background: #55ACEE;
+     color: white;
+   }
+   
+   .fa-google {
+     background: #dd4b39;
+     color: white;
+   }
+   
+   .fa-linkedin {
+     background: #007bb5;
+     color: white;
+   }
+   
+   .fa-youtube {
+     background: #bb0000;
+     color: white;
+   }
+   
+   .fa-instagram {
+     background: #125688;
+     color: white;
+   }
+   
+   .fa-pinterest {
+     background: #cb2027;
+     color: white;
+   }
+   
 
 /**************     MEDIA QUERIES ****************************************/
 
@@ -211,7 +275,10 @@ footer {background-color: #f1f1f1;}
      #grid2 {grid-template-columns: 100%;}
      .grid4 {grid-template-columns: 50% 50%;} /* el grid de 4 pasa a 2 col en tablet */
      .grid3 {grid-template-columns:50% 50%;}
-     #ancha {margin: auto;}
+     #ancha {display:inline-block;
+             margin: auto;}
+     #parte2 {margin-top:-70px;}
+
 
      /**** pendiente solucionar la tercera columna ****/
 }
