@@ -11,13 +11,30 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- enlace a favicon -->
     <link rel="shortcut icon" href="./images/feather-xxl.png" type="image/x-icon">
-    
+    <script src="./js/funciones.js"></script>
 
 </head>
 <body>
     <div id="wrapper">
         <nav>
-           aquí va la barra de navegación
+            <div class="topnav" id="myTopnav">
+                <a href="#">Inicio</a>
+                <a href="#intro">Introducción</a>
+                <a href="#ideas">Ideas</a>
+                <a href="#autores">Autores</a>
+                <a href="#galeria">Galería</a>
+                <a href="#contacto">Contacto</a>
+
+                <!-- el último botón es especial
+                se desactiva su href para que no mande 
+                a ningún sitio. A cambio, es manipulado
+                por un javascript que hace que se oculte
+                cuando los demás botones estén a la vista
+                y se muestre cuando los botones se oculten Aparece solo cuando la pantalla sea estrecha -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
         </nav>
 
     <!--  HERO VERSION 1: FOTO + TEXTO-->
@@ -147,6 +164,37 @@
 
         </section>
         
+        <!-- sección galeria -->
+        <section id="galeria">
+            <div class="titulo-seccion">
+                Galería
+             </div>
+
+             <!--lo pego a lo basto ******** -->
+             <!-- 1- voy a youtube, y copio el iframe (compartir, insertar)
+                  2- lo pego aquí y quito el width y height 
+                  3- le añado la class responsive-iframe 
+                  4- le pongo un div externo de la clase container 
+                  5- copio el css en mi hoja de estilos    -->
+
+           <div class="container">
+             <iframe class="responsive-iframe" src="https://www.youtube.com/embed/VMAPTo7RVCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- sección contacto-->
+        <section id="contacto">
+            <div class="titulo-seccion">
+                Contacto
+             </div>
+
+        <div class="container">
+             <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.2563608925925!2d-4.557001449757414!3d36.74041717986252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1669972330390!5m2!1ses!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        </section>
+
+
         <footer>
             <div class="grid3">
                 <div class="col3">
@@ -154,10 +202,12 @@
                     
                 </div>
                 <div class="col3">
-                    Home<br>
+                    <a href="#" class="enlace">Inicio</a><br>
                     Introducción<br>
                     Ideas<br>
                     Autores<br>
+                    Galería<br>
+                    Contacto
                     
                 </div>
                 <div class="col3" id="ancha">

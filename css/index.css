@@ -20,6 +20,10 @@
 
 * {box-sizing:border-box;}
 
+html {
+     scroll-behavior: smooth;
+   }
+
 body {margin:0; padding:0; /* resetear el por defecto de la ventana */
     
       font-family:textos;
@@ -33,7 +37,7 @@ body {margin:0; padding:0; /* resetear el por defecto de la ventana */
           background-color: white;
           margin:auto;}
 
-section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
+section {padding:6% 0;} /* siempre voy a querer que el contenido de cualquier
                            sección quede separado del borde superior/inferior */
 
 .titulo-seccion {font-family:titulos;
@@ -42,6 +46,86 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
                  text-align:center;
                  padding-bottom:4%;
                  }
+
+/********* ESTILO DE NAV (W3SCHOOLS) *****************/
+
+/******* para hacer sticky la barra de navegación ******/
+
+nav {position:sticky;
+     top:0;
+     z-index:999; /* marca el nivel de capa en el que debe aparecer un
+                     elemento  */
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+     background-color: #333;
+     opacity:0.7;
+     overflow: hidden;
+   }
+   
+   /* Style the links inside the navigation bar */
+   .topnav a {
+     float: left;
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   
+   /* Change the color of links on hover */
+   .topnav a:hover {
+     background-color: #ddd;
+     color:darkred;
+     font-weight:bold;
+   }
+   
+   /* Add an active class to highlight the current page */
+   .topnav a.active {
+     background-color: #04AA6D;
+     color: white;
+   }
+   
+   /* Hide the link that should open and close the topnav on small screens */
+   .topnav .icon {
+     display: none;
+     padding:0px;  /* añadido para que no engorde la barra con el
+                      icono de la hamburguesa                     */
+   }
+
+/********* LAS MEDIA QUERIES DE MI BARRA DE NAVEGACIÓN ESTARÁN AQUÍ
+           PORQUE TIENEN UN PUNTO DE CORTE DISTINTO, SOLO DEPENDE
+           DE LA PROPIA BARRA, DE SUS BOTONES Y ADEMÁS SOLO TOCAN
+           CARACTERÍSTICAS DE LA PROPIA BARRA ************************/
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 800px) {
+     .topnav a:not(:first-child) {display: none;}
+     .topnav a.icon {
+       float: right;
+       display: block;
+     }
+   }
+   
+   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+   @media screen and (max-width: 800px) {
+     .topnav.responsive {position: relative;}
+     .topnav.responsive a.icon {
+       position: absolute;
+       right: 0;
+       top: 0;
+     }
+     .topnav.responsive a {
+       float: none;
+       display: block;
+       text-align: left;
+     }
+   }
+
+
 
 /*********  HERO SECTION OPCION 1: FOTO + TEXTO ***************************/
 
@@ -200,6 +284,27 @@ section {padding:4% 0;} /* siempre voy a querer que el contenido de cualquier
 .boton:hover {background-color: #c1c0c0;
               color:#555;}
 
+/*******************  ESTILO DE GALERIA ******************************/
+
+.container {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+   }
+   
+   /* Then style the iframe to fit in the container div with full height and width */
+   .responsive-iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+   }
+
+
 /**************     FOOTER ***********************************************/
 
 footer {background-color: #f1f1f1;}
@@ -265,6 +370,11 @@ footer {background-color: #f1f1f1;}
      color: white;
    }
    
+   .enlace {text-decoration:none;
+            color:darkred;
+            font-weight:bold;}
+
+   .enlace:hover {color:rgb(220, 30, 30)}
 
 /**************     MEDIA QUERIES ****************************************/
 
@@ -274,9 +384,8 @@ footer {background-color: #f1f1f1;}
               width:45%;}
      #grid2 {grid-template-columns: 100%;}
      .grid4 {grid-template-columns: 50% 50%;} /* el grid de 4 pasa a 2 col en tablet */
-     .grid3 {grid-template-columns:50% 50%;}
-     #ancha {display:inline-block;
-             margin: auto;}
+     .grid3 {grid-template-columns:50% 50%;
+             justify-content:center;}
      #parte2 {margin-top:-70px;}
 
 
