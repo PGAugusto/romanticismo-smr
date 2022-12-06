@@ -145,7 +145,7 @@ nav {position:sticky;
          font-family: titulos;
          color:darkred;
          font-size: 2.5rem;
-         width:35%;
+         width:60%;
          padding:2%;
          text-align:center;
          border-radius:20px;
@@ -286,7 +286,7 @@ nav {position:sticky;
 
 /*******************  ESTILO DE GALERIA ******************************/
 
-.container {
+.container-16-9 {
      position: relative;
      overflow: hidden;
      width: 100%;
@@ -386,7 +386,7 @@ footer {background-color: #f1f1f1;}
      .grid4 {grid-template-columns: 50% 50%;} /* el grid de 4 pasa a 2 col en tablet */
      .grid3 {grid-template-columns:50% 50%;
              justify-content:center;}
-     #parte2 {margin-top:-70px;}
+     #parte2 {margin-top:-60px;}
 
 
      /**** pendiente solucionar la tercera columna ****/
@@ -395,5 +395,5 @@ footer {background-color: #f1f1f1;}
 @media only screen and (width<=600px){  /****** para móvil ************/
      #wrapper {width:100%;}
      .grid4 {grid-template-columns: 100%;} /* el grid de 4 pasa a 1 col en movil */
-
+     .grid3 {grid-template-columns:100%;}
 }
