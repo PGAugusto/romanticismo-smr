@@ -285,6 +285,11 @@ nav {position:sticky;
               color:#555;}
 
 /*******************  ESTILO DE GALERIA ******************************/
+.grid3-iguales { display:grid;
+                 grid-template-columns: auto auto auto;
+               }
+
+.col3-iguales {padding:3%;}
 
 .container-16-9 {
      position: relative;
@@ -387,7 +392,7 @@ footer {background-color: #f1f1f1;}
      .grid3 {grid-template-columns:50% 50%;
              justify-content:center;}
      #parte2 {margin-top:-60px;}
-
+     .grid3-iguales {grid-template-columns: 50% 50%;}
 
      /**** pendiente solucionar la tercera columna ****/
 }
@@ -396,4 +401,5 @@ footer {background-color: #f1f1f1;}
      #wrapper {width:100%;}
      .grid4 {grid-template-columns: 100%;} /* el grid de 4 pasa a 1 col en movil */
      .grid3 {grid-template-columns:100%;}
+     .grid3-iguales {grid-template-columns: 100%;}
 }
